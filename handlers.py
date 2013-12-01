@@ -3,6 +3,11 @@ from tornado import websocket
 
 __author__ = 'zhouqi'
 
+class MainHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.write("Hello, world")
+
+
 class ChatHandler(websocket.WebSocketHandler):
     def open(self):
         print "WebSocket opened"
