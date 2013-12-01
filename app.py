@@ -9,7 +9,9 @@ __author__ = 'zhouqi'
 application = tornado.web.Application([
     (r"/chat", ChatHandler),
     (r"/", MainHandler),
-])
+], **{'debug': True})
+
+
 
 if __name__ == "__main__":
     application.listen(8888)
